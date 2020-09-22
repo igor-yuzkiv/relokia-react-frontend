@@ -2,9 +2,11 @@ import React from "react";
 import {Button, Col, Container, Form, Row} from "react-bootstrap";
 import Auth from "./Auth";
 import Config from "../Config/Config"
+
 const serialize = require("form-serialize");
 
 export default function Login() {
+
     async function handleSubmit() {
         let requestBody = serialize(document.getElementById("login_form"));
         const response = await fetch(
@@ -19,7 +21,7 @@ export default function Login() {
         if (response.status === 200) {
             Auth.login(data.api_key, data.user.name, data.user.email, JSON.stringify(data.user.roles));
         } else {
-            console.log(data);
+            console.log(data)
         }
     }
 

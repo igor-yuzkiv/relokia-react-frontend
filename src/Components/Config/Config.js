@@ -8,7 +8,7 @@ let config = {
     menu: {
         items: [
             {title: "Home", to:"/" ,roles: ["Guest", "Customer", "Agent"]},
-            {title: "Ticket List", to:"/ticket-list" , roles: [ "Customer", "Agent"],},
+            {title: "Ticket List", to:"/ticket/list" , roles: ["Guest", "Customer", "Agent"],},
         ]
     },
     auth: {

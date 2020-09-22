@@ -1,22 +1,8 @@
 import React from "react";
-import {Nav, Navbar} from "react-bootstrap";
-
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link,
-    useRouteMatch,
-    useParams
-} from "react-router-dom";
-
-import TicketList from "../../TicketList";
-import Registration from "../../Auth/Registration";
-import Login from "../../Auth/Login";
+import {Alert, Navbar} from "react-bootstrap";
+import {BrowserRouter as Router} from "react-router-dom";
 import ContentEnd from "./ContentEnd";
-import Home from "../../Home";
 import MenuItem from "./MenuItem";
-import TicketCreate from "../Ticket/TicketCreate";
 import Routes from "./Routes";
 
 export default function Menu() {
@@ -28,12 +14,13 @@ export default function Menu() {
                 <MenuItem/>
 
                 <Navbar.Toggle/>
+
                 <Navbar.Collapse className="justify-content-end">
                     <ContentEnd/>
                 </Navbar.Collapse>
             </Navbar>
 
-            <Routes />
+            <Routes/>
 
         </Router>
     )

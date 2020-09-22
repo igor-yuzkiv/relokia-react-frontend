@@ -4,8 +4,8 @@ import {Button, Col, Container, Form, Row} from "react-bootstrap";
 import Auth from "./Auth";
 const serialize = require("form-serialize");
 
-
 export default function Registration () {
+
     async function handleSubmit() {
         let requestBody = serialize(document.getElementById("registration_form"));
         const response = await fetch(
@@ -21,7 +21,7 @@ export default function Registration () {
         if (response.status === 200) {
             Auth.login(data.api_key, data.user.name, data.user.email, JSON.stringify(data.user.roles));
         } else {
-            console.log(data);
+            console.log(data)
         }
     }
 

@@ -39,10 +39,6 @@ var Auth = (function () {
         return localStorage.getItem(localStorageField.userEmail)
     }
 
-    var getUserRole = () => {
-        return localStorage.getItem(localStorageField.role)
-    }
-
     var getUserRoleNames = () => {
 
         let roles =  JSON.parse(localStorage.getItem(localStorageField.role))
@@ -72,7 +68,7 @@ var Auth = (function () {
         getApiKey: getApiKey,
         isLogin: isLogin,
         logout: logout,
-        getUserRoleNames: getUserRoleNames
+        getUserRoleNames: getUserRoleNames,
     }
 })();
 
